@@ -1,0 +1,98 @@
+/* Thai Timeline Styles - Modernized */
+.professional-journey h2 {
+    font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.professional-journey h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e74c3c;
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+.timeline-content h3 {
+    font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.timeline-content p {
+    font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #34495e;
+    text-align: left;
+    hyphens: none;
+    word-spacing: normal;
+}
+
+/* Improved Thai Text Wrapping */
+.timeline-content {
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Timeline Item Enhancements */
+.timeline-item {
+    margin-bottom: 2.5rem;
+}
+
+.era-icon {
+    background: #f8f9fa;
+  
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .professional-journey h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .timeline-content p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+    
+    .era-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Thai-specific Line Height Adjustments */
+html[lang="th"] .timeline-content p {
+    line-height: 1.9;
+    word-spacing: 0.1em;
+}
+
+/* Number Styling for Thai */
+html[lang="th"] .timeline-year {
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-weight: 700;
+}
