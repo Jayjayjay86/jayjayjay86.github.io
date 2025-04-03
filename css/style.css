@@ -524,6 +524,34 @@ h2::after {
 }
 /* Responsive */
 @media (max-width: 768px) {
+    .language-switcher {
+        top: 12px;
+        right: 12px;
+        flex-direction: row; /* Keep flags horizontal */
+      }
+        /* Subjects Grid */
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  /* Timeline Items */
+  .timeline-item {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  /* Prevent Horizontal Scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Image Containment */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
     .hero h1 {
         font-size: 2.2rem;
     }
@@ -534,6 +562,47 @@ h2::after {
 }
 
 @media (max-width: 480px) {
+    .language-switcher {
+        top: 12px;
+        right: 12px;
+        flex-direction: row; /* Keep flags horizontal */
+      }
+        /* Subjects Grid */
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    padding: 0 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+.subject-column {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .subject-item {
+    flex-wrap: nowrap;
+    min-width: 0; /* Allows text truncation */
+  }
+
+  /* Timeline Items */
+  .timeline-item {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  /* Prevent Horizontal Scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Image Containment */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
     .stats-grid {
         grid-template-columns: 1fr;
     }
