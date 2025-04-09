@@ -1,0 +1,54 @@
+:root {
+  --primary: #2d3436;
+  --secondary: #0984e3;
+  --bg: #f5f6fa;
+  --text: #1e272e;
+  --card-bg: white;
+}
+
+[data-theme="dark"] {
+  --primary: #74b9ff;
+  --secondary: #0984e3;
+  --bg: #1e272e;
+  --text: #f5f6fa;
+  --card-bg: #2d3436;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.project-card {
+  background: var(--card-bg);
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.project-card.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.filter-btn.active {
+  background: var(--secondary);
+  color: white;
+}

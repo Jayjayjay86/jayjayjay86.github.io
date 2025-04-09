@@ -1,0 +1,6 @@
+title: John Sullivan
+description: Full-Stack Developer & Language Tutor
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown

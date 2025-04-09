@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Full-Stack Developer</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <div class="container">
+      <h1>Your Name</h1>
+      <p class="tagline">Building tools for education and beyond</p>
+      <div class="contact">
+        <a href="mailto:email@example.com"><i class="fas fa-envelope"></i> email@example.com</a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#" target="_blank"><i class="fas fa-link"></i> Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Project Filters -->
+    <section id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+    </section>
+
+    <!-- Projects Grid (now with filter tags) -->
+    <section id="projects">
+      <div class="project-grid">
+        <div class="project-card" data-tags="frontend backend">
+          <h3>LINE Chatbot for Teaching</h3>
+          <p class="tech-stack">Node.js, LINE API</p>
+          <div class="project-details">
+            <p>Automated student messaging for 50+ users.</p>
+            <a href="#" class="github-link"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="project-card" data-tags="iot">
+          <h3>Humidifier Control App</h3>
+          <p class="tech-stack">PyQt, IoT Sensors</p>
+          <div class="project-details">
+            <p>Automated environment control with IR.</p>
+            <a href="#" class="github-link"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
