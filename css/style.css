@@ -496,10 +496,14 @@ h2::after {
     margin-top: 3rem;
 }
 
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
 .gallery-item {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .gallery-item img {
@@ -517,10 +521,10 @@ h2::after {
     font-weight: 500;
 }
 
-/* Contact */
+
 .contact {
     padding: 5rem 0;
-    background-color: var(--dark);
+    background: linear-gradient(135deg, #832383 0%, #422c50 100%);
     color: white;
     text-align: center;
 }
