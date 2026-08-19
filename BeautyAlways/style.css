@@ -472,6 +472,69 @@ body {
   margin-bottom: 0 !important;
   font-style: italic;
 }
+/* ----- CURRENCY BAR ----- */
+.currency-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #fcf8f5;
+  border-radius: 60px;
+  border: 1px solid #f0e8e2;
+  margin-bottom: 2rem;
+}
+
+.currency-label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #8c7c70;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.currency-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.currency-btn {
+  padding: 0.35rem 0.9rem;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 450;
+  color: #5a4a40;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.currency-btn:hover {
+  background: #f4ede8;
+  border-color: #e5ddd8;
+}
+
+.currency-btn.active {
+  background: #1e1b18;
+  color: white;
+  border-color: #1e1b18;
+}
+
+.currency-btn.active:hover {
+  background: #3d342e;
+}
+
+.currency-updated {
+  font-size: 0.75rem;
+  color: #b2a69c;
+  font-weight: 300;
+}
+
+
 /* ----- FOOTER ----- */
 .footer {
   margin-top: 4rem;
@@ -612,6 +675,22 @@ body {
   }
   .modal-card {
     padding: 2rem 1.5rem;
+  }
+   .currency-bar {
+    border-radius: 24px;
+    padding: 0.8rem 1rem;
+    justify-content: center;
+  }
+  .currency-label {
+    width: 100%;
+    text-align: center;
+  }
+  .currency-options {
+    justify-content: center;
+  }
+  .currency-btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.7rem;
   }
   .footer-social {
     gap: 0.8rem 1.2rem;
