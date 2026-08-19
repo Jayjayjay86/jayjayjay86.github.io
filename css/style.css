@@ -50,14 +50,15 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     color: #ccc;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     transition: color 0.2s;
 }
 
@@ -68,10 +69,10 @@ body {
 .nav-links .btn-cta {
     background: #d4a017;
     color: #fff;
-    padding: 6px 20px;
+    padding: 6px 18px;
     border-radius: 40px;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-decoration: none;
     transition: background 0.2s;
 }
@@ -82,7 +83,7 @@ body {
 
 /* --- HERO --- */
 .hero {
-    padding: 80px 24px 60px;
+    padding: 60px 24px 50px;
     text-align: center;
     background: linear-gradient(145deg, #f7f5f2 0%, #eae5de 100%);
 }
@@ -92,7 +93,7 @@ body {
     background: #1a1a2e;
     color: #d4a017;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     padding: 4px 16px;
     border-radius: 40px;
@@ -101,7 +102,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-weight: 700;
     letter-spacing: -0.5px;
     line-height: 1.2;
@@ -112,10 +113,10 @@ body {
 }
 
 .hero p {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: #3a3a4e;
-    max-width: 600px;
-    margin: 16px auto 0;
+    max-width: 680px;
+    margin: 12px auto 0;
 }
 
 .hero-actions {
@@ -135,7 +136,7 @@ body {
     border-radius: 40px;
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
+    transition: background 0.2s;
     border: none;
     cursor: pointer;
 }
@@ -217,7 +218,7 @@ body {
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
     margin-bottom: 48px;
 }
@@ -389,15 +390,60 @@ body {
     font-size: 0.95rem;
 }
 
-.pricing-features ul li::before {
-    content: "";
-    margin-right: 8px;
-}
-
 .pricing-note {
     font-size: 0.85rem;
     color: #888;
     margin-top: 12px;
+}
+
+/* --- LEGAL SECTIONS (Privacy & Terms) --- */
+.legal {
+    padding: 50px 0;
+    background: #f7f5f2;
+    border-top: 1px solid #e8e3dc;
+}
+
+.legal .container {
+    max-width: 780px;
+    background: #fff;
+    padding: 40px 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.legal h2 {
+    font-size: 1.8rem;
+    color: #1a1a2e;
+    border-bottom: 3px solid #d4a017;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.legal h3 {
+    font-size: 1.1rem;
+    margin-top: 24px;
+    color: #1a1a2e;
+}
+
+.legal p,
+.legal li {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.legal ul {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+.legal a {
+    color: #d4a017;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
 }
 
 /* --- FOOTER --- */
@@ -470,8 +516,11 @@ body {
 
     .nav-links {
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
     }
 
     .hero h1 {
@@ -501,11 +550,15 @@ body {
     .pricing-price .amount {
         font-size: 2.8rem;
     }
+
+    .legal .container {
+        padding: 24px 20px;
+    }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 50px 16px 40px;
+        padding: 40px 16px 30px;
     }
 
     .hero-actions {
