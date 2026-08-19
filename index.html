@@ -1,297 +1,175 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Toey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Literata:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrganicOrNot – Viral Authenticity Intelligence</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="OrganicOrNot provides real-time viral authenticity scoring for TikTok, YouTube, and Douyin. Detect artificial hype before you pay for it." />
+    <meta name="keywords" content="viral authenticity, organic score, influencer fraud detection, social media analytics, TikTok bot detection" />
+    <link rel="canonical" href="https://jayjayjay86.github.io/" />
+
+    <!-- Structured Data for Scrapers -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "OrganicOrNot",
+        "description": "Real-time organic score analytics for viral content on TikTok, YouTube, and Douyin.",
+        "url": "https://jayjayjay86.github.io/",
+        "offers": {
+            "@type": "Offer",
+            "description": "Monthly viral authenticity monitoring and Organic Score reports.",
+            "price": "197.00",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <a href="https://jayjayjay86.github.io/index.html" class="active"><img src="assets/flags/en.png" alt="English" width="30"></a>
-        <a href="https://jayjayjay86.github.io/index-th.html" ><img src="assets/flags/th.png" alt="ไทย" width="30"></a>
-    </div>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-background">
-            <!-- Floating educational elements -->
-            <div class="floating-icon" style="top:20%; left:10%">📚</div>
-            <div class="floating-icon" style="top:30%; right:15%">✏️</div>
-            <div class="floating-icon" style="top:70%; left:25%">🎓</div>
-            <div class="floating-icon" style="top:60%; right:5%">🌟</div>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <span>Organic</span>OrNot
         </div>
-        
-        <div class="hero-content">
-            <div class="teacher-mascot">
-                <div class="mascot-head"><img src="assets/images/mascot.jpg" alt="Tutor Channy"/></div>
-                <div class="mascot-book">📖</div>
-            </div>
-            
-            <div class="hero-text">
-                <h1>
-                    <span class="serious-part">Serious Learning</span>
-                    <span class="fun-part">Joyful Growing!</span>
-                </h1>
-                <p class="tagline">Where Warmth Meets Wisdom<br>
-                    <span class="experience-badge">
-                        <span class="years-count">20</span>
-                        <span class="years-label">Years Transforming Students</span>
-                    </span>
-            </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#datalab">Data Lab</a>
+            <a href="#contact" class="btn-cta">Get Started</a>
         </div>
-    
-        <div class="scroll-indicator">
-            <div class="mouse-icon"></div>
-            <div class="scroll-text">Explore Our Journey</div>
-        </div>
-    </header>
+    </nav>
 
-    <!-- Results Overview -->
-    <section class="results-overview">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
         <div class="container">
-            <h2>Results</h2>
+            <div class="hero-badge">🔍 Real-Time Intelligence</div>
+            <h1>Is It <span>Organic</span> or <span>Injected</span>?</h1>
+            <p>We analyze viral growth curves, commenter quality, and timestamp anomalies to give you an <strong>Organic Score</strong> – so you know if that "hype" is real or manufactured.</p>
+            <div class="hero-actions">
+                <a href="#datalab" class="btn-primary">Explore the Data</a>
+                <a href="#contact" class="btn-secondary">Request a Free Sample</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats">
+        <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number" data-count="500">500</div>
-                    <div class="stat-label">Students Taught</div>
+                    <div class="stat-number" id="statVideos">10,000+</div>
+                    <div class="stat-label">Videos Analyzed</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="99">99%</div>
-                    <div class="stat-label">Satisfaction Rate</div>
+                    <div class="stat-number" id="statAccuracy">94%</div>
+                    <div class="stat-label">Detection Accuracy</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="100">100%</div>
-                    <div class="stat-label">All Levels Welcome</div>
+                    <div class="stat-number" id="statPlatforms">3</div>
+                    <div class="stat-label">Platforms Supported</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="professional-journey">
+    <!-- ===== DATA LAB ===== -->
+    <section class="datalab" id="datalab">
         <div class="container">
-            <h2>Teaching Legacy</h2>
-            <div class="timeline">
-                <!-- Phuket Era -->
-                <div class="timeline-item">
-                   
-                    <div class="timeline-content">
-                        <div class="era-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="timeline-year">2000</div>
-                        <h3>Humble beginnings</h3>
-                        <p>Started at a local tutoring school in Phuket, helping grow it into a prestigious language institution. Organized large-scale educational events for hundreds of students, developing signature teaching methodologies still used today.</p>
-                    </div>
-                    <div class="timeline-image">
-                        <div class="image-slideshow">
-                            <img src="assets/images/besten.jpg" alt="Phuket classroom" class="active">
-                            <img src="assets/images/besten (2).jpg" alt="Phuket classroom">
-                            <img src="assets/images/besten (3).jpg" alt="Phuket classroom">
-                        </div>
-                       
-                    </div>
-                </div>
-               
-    
-                <!-- Bangkok Era -->
-                <div class="timeline-item">
-                   
-                    <div class="timeline-content">
-                        <div class="era-icon">
-                            <i class="fas fa-tree"></i>
-                        </div>
-                        <div class="timeline-year">2010</div>
-                        <h3>New Foundations</h3>
-                        
-                        <p>Relocated to outer Bangkok region, partnering with a private nursery to become an educational cornerstone. Developed specialized early childhood programs while maintaining academic excellence for older students.</p>
-                    </div>
-                    <div class="timeline-image">
-                        <div class="image-slideshow">
-                            <img src="assets/images/group.jpg" alt="Phuket classroom" class="active">
-                            <img src="assets/images/group (2).jpg" alt="Phuket classroom">
-                            <img src="assets/images/group (3).jpg" alt="Phuket classroom">
-                        </div>
-                       
-                    </div>
-                </div>
-    
-                <!-- COVID Pivot -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="era-icon">
-                            <i class="fas fa-laptop-medical"></i>
-                        </div>
-                         <div class="timeline-year">2020</div>
-                        <h3>Digital Transformation</h3>
-                       
-                        <p>Pioneered online teaching solutions during COVID lockdowns, creating interactive digital worksheets and conversation practice systems via Facebook and Line Messenger. Maintained 100% student retention through the transition.</p>
-                    </div>
-                    <div class="timeline-image">
-                        <div class="image-slideshow">
-                            <img src="assets/images/online.jpg" alt="Phuket classroom" class="active">
-                            <img src="assets/images/online (2).jpg" alt="Phuket classroom">
-                            <img src="assets/images/online (3).jpg" alt="Phuket classroom">
-                        </div>
-                       
-                    </div>
-                    
-                </div>
-    
-                <!-- Present Day -->
-                <div class="timeline-item">
+            <h2>📊 How It Works</h2>
+            <p class="section-sub">Our proprietary algorithm scores viral content on a scale of 0–100.</p>
 
-                    <div class="timeline-content">
-                        <div class="era-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="timeline-year">2025</div>
-                        <h3>Continuing Legacy</h3>
-                        <p>Currently blending traditional teaching values with modern technology, offering both in-person and online sessions. Maintaining proven track record of academic success while adapting to new educational challenges.</p>
-                    </div>
-                    <div class="timeline-image">
-                        <div class="image-slideshow">
-                            <img src="assets/images/459779147_27819793927619502_6031037205891448106_n.jpg" alt="Phuket classroom" class="active">
-                            <img src="assets/images/31416798_698943477163279_7487189283346841600_n.jpg" alt="Current teaching">
-                            <img src="assets/images/441073132_26481712751427633_3485698081581263832_n (1).jpg" alt="Current teaching">
-                        </div>
-                       
-                    </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">⏱️</div>
+                    <h3>Timestamp Anomaly</h3>
+                    <p>We flag videos that spike at unusual hours (e.g., 2:00–4:00 AM) – a classic sign of coordinated bot pushes.</p>
+                    <div class="card-tag">Growth Curve</div>
                 </div>
+
+                <div class="card">
+                    <div class="card-icon">👤</div>
+                    <h3>Commenter Quality</h3>
+                    <p>We analyze account age and UID patterns. Sequential IDs or accounts created in the last 7 days = bot farm.</p>
+                    <div class="card-tag">Batch Detection</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Organic Score</h3>
+                    <p>0–30: Likely injected. 30–70: Hybrid. 70–100: Likely organic. Know what you're paying for.</p>
+                    <div class="card-tag">Proprietary Model</div>
+                </div>
+            </div>
+
+            <!-- Score Demo -->
+            <div class="score-demo">
+                <h3>Live Score Example</h3>
+                <div class="score-meter">
+                    <div class="score-bar" id="scoreBar" style="width:22%;"></div>
+                </div>
+                <div class="score-labels">
+                    <span>Injected</span>
+                    <span id="scoreValue">22</span>
+                    <span>Organic</span>
+                </div>
+                <p class="score-note">This video shows a <strong>1,400%</strong> spike at 2:17 AM with <strong>&lt;30%</strong> watch-time completion.</p>
             </div>
         </div>
     </section>
 
-    <!-- Teaching Areas -->
-    <section class="teaching-areas">
+    <!-- ===== PRICING ===== -->
+    <section class="pricing" id="contact">
         <div class="container">
-            <h2>Teaching Expertise</h2>
-            <div class="subjects-grid">
-                <!-- Thai Curriculum -->
-                <div class="subject-column">
-                    <h3>Thai Curriculum Subjects</h3>
-                    <div class="subject-item">
-                        <i class="fas fa-calculator"></i>
-                        <span>Mathematics (Thai)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-flask"></i>
-                        <span>Sciences (Thai)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <span>IT & Computer Science (Thai)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-landmark"></i>
-                        <span>Social Studies & History (Thai)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-book-open"></i>
-                        <span>Thai Language & Literature</span>
-                    </div>
+            <h2>💰 Simple Pricing</h2>
+            <p class="section-sub">No contracts. Cancel anytime.</p>
+
+            <div class="pricing-card">
+                <div class="pricing-price">
+                    <span class="currency">$</span><span class="amount">197</span>
+                    <span class="period">/ month</span>
                 </div>
-            
-                <!-- English Curriculum -->
-                <div class="subject-column">
-                    <h3>English Curriculum Subjects</h3>
-                    <div class="subject-item">
-                        <i class="fas fa-comments"></i>
-                        <span>English Conversation</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-pencil-alt"></i>
-                        <span>English Grammar</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-atom"></i>
-                        <span>Science (English)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-square-root-alt"></i>
-                        <span>Mathematics (English)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-palette"></i>
-                        <span>Art & Design (English)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-network-wired"></i>
-                        <span>IT & Computer Science (English)</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-briefcase"></i>
-                        <span>Business English</span>
-                    </div>
-                    <div class="subject-item">
-                        <i class="fas fa-industry"></i>
-                        <span>Specialized Cases</span>
-                    </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>✅ Monitor up to 10 videos / campaigns</li>
+                        <li>✅ Organic Score reports (PDF)</li>
+                        <li>✅ Timestamp anomaly detection</li>
+                        <li>✅ Commenter quality analysis</li>
+                        <li>✅ Email alerts for suspicious spikes</li>
+                    </ul>
                 </div>
+                <a href="#" class="btn-primary btn-block">Start Your Pilot Month</a>
+                <p class="pricing-note">Free sample report available – no obligation.</p>
             </div>
         </div>
     </section>
 
-    <!-- Document Gallery -->
-    <section class="document-gallery">
+    <!-- ===== CONTACT / FOOTER ===== -->
+    <footer class="footer">
         <div class="container">
-            <h2>Evidence of Excellence</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/images/group.jpg" alt="สื่อการสอนหลายปี">
-                    <p>Summer Camp Group - learning about money</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/group (2).jpg" alt="ตารางสอน">
-                    <p>Easy English Group Class</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/group (3).jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/score1.jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/score3.jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/score4.jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/score5.jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/score6.jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/score2.jpg" alt="จดหมายขอบคุณ">
-                    <p>English Group Classes</p>
-                </div>
+            <div class="footer-brand">
+                <span>Organic</span>OrNot
             </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <footer class="contact">
-        <div class="container">
-            <h2>Education That Makes a Difference</h2>
-            <p>Join hundreds of successful students who found their path with us</p>
-            <div class="social-link">
-                <a href="https://www.facebook.com/tutorchanny" target="_blank">
-                    <img src="assets/images/facebook-icon.png" alt="Facebook" width="40">
-                </a>
+            <p class="footer-tagline">Viral Authenticity Intelligence</p>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/tutorchanny" target="_blank">Facebook</a>
+                <a href="https://github.com/jayjayjay86" target="_blank">GitHub</a>
+                <a href="mailto:hello@organicornot.com">Email</a>
             </div>
+            <p class="footer-copy">
+                &copy; 2026 OrganicOrNot. Developed by <strong>J. Sullivan</strong>.
+            </p>
+            <p class="footer-disclaimer">
+                Scores are statistical estimates, not definitive platform metrics. Data sourced from public APIs.
+            </p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
