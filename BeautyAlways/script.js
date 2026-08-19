@@ -15,6 +15,90 @@ let currentView = 'grid'; // 'grid' or 'list'
 let debounceTimer = null;
 
 // ============================================================
+//  CURRENCY STATE
+// ============================================================
+let currentCurrency = 'USD';
+let exchangeRates = { USD: 1 };
+let lastProducts = []; // store last fetched products for re-render
+
+// Currency symbols
+const currencySymbols = {
+  USD: '$',
+  THB: '฿',
+  GBP: '£',
+  EUR: '€',
+  JPY: '¥',
+};
+
+// ============================================================
+//  EXCHANGE RATE FETCHER (Free API)
+// ============================================================
+async function fetchExchangeRates(base = 'USD') {
+  try {
+    // Using free ExchangeRate-API (no key needed for demo)
+    const response = await fetch(
+      `https://api.exchangerate-api.com/v4/latest/${base}`
+    );
+    if (!response.ok) throw new Error('Rate fetch failed');
+    const data = await response.json();
+    return data.rates;
+  } catch (err) {
+    console.warn('Exchange rate API error, using fallback rates:', err);
+    // Fallback rates (approximate, updated manually)
+    return {
+      USD: 1,
+      THB: 34.5,
+      GBP: 0.79,
+      EUR: 0.92,
+      JPY: 149.5,
+    };
+  }
+}
+
+// ============================================================
+//  PRICE FORMATTER
+// ============================================================
+function formatPrice(usdPrice, currency, rates) {
+  if (!usdPrice || isNaN(usdPrice)) return 'Price N/A';
+  
+  const rate = rates[currency] || 1;
+  const converted = usdPrice * rate;
+  const symbol = currencySymbols[currency] || '$';
+  
+  // Format based on currency
+  let formatted;
+  if (currency === 'JPY') {
+    formatted = Math.round(converted).toLocaleString();
+  } else {
+    formatted = converted.toFixed(2);
+  }
+  
+  return `${symbol}${formatted}`;
+}
+
+// ============================================================
+//  UPDATE CURRENCY UI
+// ============================================================
+function updateCurrencyUI() {
+  // Update active button
+  document.querySelectorAll('.currency-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.currency === currentCurrency);
+  });
+  
+  // Update "updated" timestamp
+  const now = new Date();
+  const updatedEl = document.getElementById('currencyUpdated');
+  if (updatedEl) {
+    updatedEl.textContent = `Rates updated: ${now.toLocaleDateString()}`;
+  }
+  
+  // Re-render products with new currency
+  if (lastProducts && lastProducts.length > 0) {
+    renderProducts(lastProducts);
+  }
+}
+
+// ============================================================
 //  API CALL
 // ============================================================
 async function fetchProducts(query) {
@@ -35,6 +119,8 @@ async function fetchProducts(query) {
 //  RENDER FUNCTIONS
 // ============================================================
 function renderProducts(products) {
+  lastProducts = products; // store for currency re-renders
+  
   emptyState.style.display = 'none';
 
   if (!products || products.length === 0) {
@@ -43,11 +129,7 @@ function renderProducts(products) {
     return;
   }
 
-  // Grid is the only functional view; list view is locked.
-  // We always render grid, but if list is clicked we show modal.
   const isGridView = (currentView === 'grid');
-  
-  // Clear and set class
   resultsContainer.innerHTML = '';
   resultsContainer.className = isGridView ? 'results-grid' : 'results-list';
 
@@ -75,9 +157,15 @@ function renderProducts(products) {
     type.className = 'p-type';
     type.textContent = p.product_type || 'General';
 
+    // ---- PRICE WITH CURRENCY ----
     const price = document.createElement('div');
     price.className = 'p-price';
-    price.textContent = p.price ? `$${p.price}` : 'Price N/A';
+    const usdPrice = parseFloat(p.price);
+    if (!isNaN(usdPrice) && usdPrice > 0) {
+      price.textContent = formatPrice(usdPrice, currentCurrency, exchangeRates);
+    } else {
+      price.textContent = 'Price N/A';
+    }
 
     const rating = document.createElement('div');
     rating.className = 'p-rating';
@@ -105,7 +193,6 @@ async function handleSearchInput(query) {
     return;
   }
 
-  // Show top 8 matches in dropdown
   autocompleteList.innerHTML = '';
   const slice = products.slice(0, 8);
   slice.forEach(p => {
@@ -135,13 +222,10 @@ async function handleSearchInput(query) {
     info.append(name, meta);
     item.append(img, info);
 
-    // On click, fill search and show results
     item.addEventListener('click', () => {
       searchInput.value = p.name || '';
       autocompleteList.classList.remove('active');
-      renderProducts([p]); // show that single product, or we could fetch full list again
-      // Better: fetch all matching to show similar ones
-      fetchAndRender(searchInput.value);
+      renderProducts([p]);
     });
 
     autocompleteList.appendChild(item);
@@ -188,25 +272,29 @@ gridViewBtn.addEventListener('click', () => {
   currentView = 'grid';
   gridViewBtn.classList.add('active');
   listViewBtn.classList.remove('active');
-  // Re-render existing results in grid
-  const currentItems = resultsContainer.querySelectorAll('.product-card');
-  if (currentItems.length > 0) {
-    // We need to re-render with grid class
-    // Simplest: re-run the last search. We'll store last query.
-    const lastQuery = searchInput.value.trim();
-    if (lastQuery) fetchAndRender(lastQuery);
-    else {
-      resultsContainer.className = 'results-grid';
-      // no content change needed, just class
-    }
-  } else {
+  const lastQuery = searchInput.value.trim();
+  if (lastQuery) fetchAndRender(lastQuery);
+  else {
     resultsContainer.className = 'results-grid';
   }
 });
 
 listViewBtn.addEventListener('click', () => {
-  // Paywall: Show the Pro modal
   proModal.style.display = 'flex';
+});
+
+// ----- CURRENCY TOGGLE -----
+document.querySelectorAll('.currency-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const currency = btn.dataset.currency;
+    if (currency === currentCurrency) return;
+    
+    currentCurrency = currency;
+    
+    // Fetch new exchange rates
+    exchangeRates = await fetchExchangeRates('USD');
+    updateCurrencyUI();
+  });
 });
 
 // ----- MODAL CONTROLS -----
@@ -223,10 +311,14 @@ proModal.addEventListener('click', (e) => {
 });
 
 // ============================================================
-//  INIT: load some default products on startup
+//  INIT
 // ============================================================
-window.addEventListener('DOMContentLoaded', () => {
-  // Show a curated default set (e.g., "lipstick" to look beautiful)
+window.addEventListener('DOMContentLoaded', async () => {
+  // Fetch exchange rates
+  exchangeRates = await fetchExchangeRates('USD');
+  updateCurrencyUI();
+  
+  // Load default products
   searchInput.value = 'lipstick';
   fetchAndRender('lipstick');
 });
