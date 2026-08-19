@@ -60,18 +60,20 @@
           <span class="pro-badge">PRO</span>
         </button>
       </div>
-    <!-- CURRENCY SELECTOR -->
-    <div class="currency-bar">
-      <span class="currency-label">Currency</span>
-      <div class="currency-options">
-        <button class="currency-btn active" data-currency="USD">$ USD</button>
-        <button class="currency-btn" data-currency="THB">฿ THB</button>
-        <button class="currency-btn" data-currency="GBP">£ GBP</button>
-        <button class="currency-btn" data-currency="EUR">€ EUR</button>
-        <button class="currency-btn" data-currency="JPY">¥ JPY</button>
+      <!-- CURRENCY SELECTOR -->
+      <div class="currency-bar">
+        <span class="currency-label">Currency</span>
+        <div class="currency-options">
+          <button class="currency-btn active" data-currency="USD">$ USD</button>
+          <button class="currency-btn" data-currency="THB">฿ THB</button>
+          <button class="currency-btn" data-currency="GBP">£ GBP</button>
+          <button class="currency-btn" data-currency="EUR">€ EUR</button>
+          <button class="currency-btn" data-currency="JPY">¥ JPY</button>
+        </div>
+        <span class="currency-updated" id="currencyUpdated"
+          >Rates updated: today</span
+        >
       </div>
-      <span class="currency-updated" id="currencyUpdated">Rates updated: today</span>
-    </div>
       <!-- RESULTS CONTAINER -->
       <div id="results-container" class="results-grid"></div>
 
@@ -171,6 +173,8 @@
         </div>
       </div>
     </footer>
+    <!-- At the bottom, before script.js -->
+    <script src="config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
