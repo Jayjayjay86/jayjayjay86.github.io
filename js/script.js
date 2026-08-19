@@ -1,11 +1,6 @@
 /**
  * OrganicOrNot – Main Script
  * Developed by J. Sullivan
- *
- * Features:
- * - Animated score bar on load
- * - Smooth scroll for navigation links
- * - Console greeting (scraper-friendly)
  */
 
 (function() {
@@ -39,10 +34,10 @@
         var valueDisplay = document.getElementById('scoreValue');
         if (!bar || !valueDisplay) return;
 
-        var targetWidth = 22; // percentage
+        var targetWidth = 22;
         var current = 0;
         var step = 1;
-        var interval = 16; // ms
+        var interval = 16;
 
         var timer = setInterval(function() {
             current += step;
@@ -55,15 +50,13 @@
         }, interval);
     }
 
-    // Run after a short delay to ensure layout is ready
     setTimeout(animateScoreBar, 300);
 
-    // --- Stat counter animation (simple) ---
+    // --- Stat counter animation ---
     function animateStats() {
         var statNumbers = document.querySelectorAll('.stat-number');
         statNumbers.forEach(function(el) {
             var text = el.textContent.trim();
-            // Only animate if it contains a number (skip '3' which is fine)
             var match = text.match(/^([\d,]+)/);
             if (!match) return;
             var target = parseInt(match[1].replace(/,/g, ''), 10);
@@ -83,7 +76,6 @@
         });
     }
 
-    // Run stats animation when element is visible (simple timeout)
     setTimeout(animateStats, 500);
 
     // --- Footer year update ---
