@@ -1,0 +1,64 @@
+/* ===== ENGLISH VERSION SPECIFIC STYLES ===== */
+/* Any English-specific font adjustments or overrides */
+
+/* Slightly adjust font weights for English readability */
+body {
+    font-weight: 400;
+}
+
+.hero-text .serious-part {
+    font-weight: 700;
+}
+
+.hero-text .fun-part {
+    font-family: 'Charmonman', cursive;
+    font-weight: 400;
+}
+
+/* Adjust tagline for English text length */
+.tagline {
+    font-size: 1.2rem;
+}
+
+/* Timeline content - English text may be longer */
+.timeline-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Subject items - ensure icons align properly */
+.subject-item i {
+    min-width: 28px;
+}
+
+/* Gallery item text */
+.gallery-item p {
+    font-size: 0.95rem;
+}
+
+/* Experience badge text */
+.years-label {
+    font-weight: 500;
+}
+
+/* Scroll text */
+.scroll-text {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments for English text */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .hero-text .fun-part {
+        font-size: 2rem;
+    }
+    .tagline {
+        font-size: 1rem;
+    }
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+}
