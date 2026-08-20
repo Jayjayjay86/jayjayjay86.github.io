@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ครูเตย</title>
+    <title>ครูเตย - สอนพิเศษ</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-th.css">
     <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Language Switcher -->
@@ -19,7 +20,6 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-background">
-            <!-- Floating educational elements -->
             <div class="floating-icon" style="top:20%; left:10%">📚</div>
             <div class="floating-icon" style="top:30%; right:15%">✏️</div>
             <div class="floating-icon" style="top:70%; left:25%">🎓</div>
@@ -28,7 +28,9 @@
         
         <div class="hero-content">
             <div class="teacher-mascot">
-                <div class="mascot-head"><img src="assets/images/mascot.jpg" alt="ครูเตย"/></div>
+                <div class="mascot-head">
+                    <img src="assets/images/mascot.jpg" alt="ครูเตย" onerror="this.style.display='none'"/>
+                </div>
                 <div class="mascot-book">📖</div>
             </div>
             
@@ -37,11 +39,11 @@
                     <span class="serious-part">การเรียนรู้อย่างจริงจัง</span>
                     <span class="fun-part">เติบโตอย่างสนุกสนาน!</span>
                 </h1>
-                <p class="tagline">ที่ซึ่งความอบอุ่นพบกับปัญญา<br>
-                    <span class="experience-badge">
-                        <span class="years-count">20</span>
-                        <span class="years-label">ปีประสบการณ์</span>
-                    </span>
+                <p class="tagline">ที่ซึ่งความอบอุ่นพบกับปัญญา</p>
+                <div class="experience-badge">
+                    <span class="years-count">20</span>
+                    <span class="years-label">ปีประสบการณ์</span>
+                </div>
             </div>
         </div>
     
@@ -57,7 +59,7 @@
             <h2>ผลลัพธ์</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number" data-count="500">500</div>
+                    <div class="stat-number" data-count="500">500+</div>
                     <div class="stat-label">นักเรียนทั้งหมด</div>
                 </div>
                 <div class="stat-item">
@@ -72,102 +74,90 @@
         </div>
     </section>
 
-   <!-- Modified Thai Timeline Section -->
-<section class="professional-journey">
-    <div class="container">
-        <h2>ประวัติการสอน</h2>
-        <div class="timeline">
-            <!-- Phuket Era -->
-            <div class="timeline-item">
-
-                <div class="timeline-content">
-                    <div class="era-icon">
-                        <i class="fas fa-school"></i>
+    <!-- Professional Journey Timeline -->
+    <section class="professional-journey">
+        <div class="container">
+            <h2>ประวัติการสอน</h2>
+            <div class="timeline">
+                <!-- Phuket Era -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="era-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-year">2000</div>
+                        <h3>จุดเริ่มต้นอันเรียบง่าย</h3>
+                        <p>เริ่มต้นการสอนที่โรงเรียนกวดวิชาในจังหวัดภูเก็ต ช่วยพัฒนาจนกลายเป็นสถาบันภาษาชั้นนำ จัดงานการศึกษาขนาดใหญ่สำหรับนักเรียนหลายร้อยคน พัฒนาวิธีการสอนเฉพาะตัวที่ยังใช้จนถึงปัจจุบัน</p>
                     </div>
-                    <div class="timeline-year">2000</div>
-                    <h3>จุดเริ่มต้นอันเรียบง่าย</h3>
-                    <p>เริ่มต้นการสอนที่โรงเรียนกวดวิชาในจังหวัดภูเก็ต ช่วยพัฒนาจนกลายเป็นสถาบันภาษาชั้นนำ จัดงานการศึกษาขนาดใหญ่สำหรับนักเรียน数百คน พัฒนาวิธีการสอนเฉพาะตัวที่ยังใช้จนถึงปัจจุบัน</p>
-                </div>
-                <div class="timeline-image">
-                    <div class="image-slideshow">
-                        <img src="assets/images/besten.jpg" alt="โรงเรียนกวดวิชาที่ภูเก็ต" class="active">
-                        <img src="assets/images/besten (2).jpg" alt="โรงเรียนกวดวิชาที่ภูเก็ต">
-                        <img src="assets/images/besten (3).jpg" alt="โรงเรียนกวดวิชาที่ภูเก็ต">
-                    </div>
-                </div>  
-            </div>
-
-            <!-- Bangkok Era -->
-            <div class="timeline-item">
-
-
-               
-                <div class="timeline-content">
-                    <div class="era-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <div class="timeline-year">2010</div>
-                    <h3>การเริ่มต้นใหม่</h3>
-                    <p>ย้ายมาประกอบอาชีพครูที่ปริมณฑลกรุงเทพฯ ร่วมงานกับโรงเรียนอนุบาลเอกชน พัฒนาหลักสูตรการศึกษาปฐมวัยเฉพาะทาง พร้อมรักษามาตรฐานวิชาการสำหรับนักเรียนรุ่นใหญ่</p>
-                </div>
-                <div class="timeline-image">
-                    <div class="image-slideshow">
-                        <img src="assets/images/group.jpg" alt="โรงเรียนอนุบาลในกรุงเทพ" class="active">
-                        <img src="assets/images/group (2).jpg" alt="โรงเรียนอนุบาลในกรุงเทพ">
-                        <img src="assets/images/group (3).jpg" alt="โรงเรียนอนุบาลในกรุงเทพ">
-                    </div>
-                   
-                </div>
-              
-            </div>
-
-            <!-- COVID Pivot -->
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="era-icon">
-                        <i class="fas fa-laptop-medical"></i>
-                    </div>
-                    <div class="timeline-year">2020</div>
-                    <h3>การปรับตัวสู่ดิจิทัล</h3>
-                    <p>พัฒนาระบบการสอนออนไลน์ในช่วงล็อกดาวน์ สร้างแบบฝึกหัดดิจิทัลและระบบฝึกสนทนาผ่าน Facebook และ Line Messenger รักษาอัตรานักเรียนไว้ได้ 100% ตลอดการเปลี่ยนแปลง</p>
-                </div>
-                
-                <div class="timeline-image">
-                    <div class="image-slideshow">
-                        <img src="assets/images/online.jpg" alt="การสอนออนไลน์" class="active">
-                        <img src="assets/images/online (2).jpg" alt="การสอนออนไลน์">
-                        <img src="assets/images/online (3).jpg" alt="การสอนออนไลน์">
-                    </div>
-                   
+                    <div class="timeline-image">
+                        <div class="image-slideshow">
+                            <img src="assets/images/besten.jpg" alt="โรงเรียนกวดวิชาที่ภูเก็ต" class="active" onerror="this.style.display='none'">
+                            <img src="assets/images/besten (2).jpg" alt="โรงเรียนกวดวิชาที่ภูเก็ต" onerror="this.style.display='none'">
+                            <img src="assets/images/besten (3).jpg" alt="โรงเรียนกวดวิชาที่ภูเก็ต" onerror="this.style.display='none'">
+                        </div>
+                    </div>  
                 </div>
 
-               
-            </div>
-
-            <!-- Present Day -->
-            <div class="timeline-item">
-            
-                <div class="timeline-content">
-                    <div class="era-icon">
-                        <i class="fas fa-star"></i>
+                <!-- Bangkok Era -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="era-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="timeline-year">2010</div>
+                        <h3>การเริ่มต้นใหม่</h3>
+                        <p>ย้ายมาประกอบอาชีพครูที่ปริมณฑลกรุงเทพฯ ร่วมงานกับโรงเรียนอนุบาลเอกชน พัฒนาหลักสูตรการศึกษาปฐมวัยเฉพาะทาง พร้อมรักษามาตรฐานวิชาการสำหรับนักเรียนรุ่นใหญ่</p>
                     </div>
-                    <div class="timeline-year">2025</div>
-                    <h3>สานต่อความสำเร็จ</h3>
-                    <p>ปัจจุบันผสมผสานการสอนแบบดั้งเดิมกับเทคโนโลยีสมัยใหม่ มีทั้งคลาสเรียนแบบพบปะและออนไลน์ รักษาประวัติความสำเร็จทางวิชาการขณะปรับตัวรับความท้าทายใหม่ๆ</p>
-                </div>
-                <div class="timeline-image">
-                    <div class="image-slideshow">
-                        <img src="assets/images/online.jpg" alt="การสอนปัจจุบัน" class="active">
-                        <img src="assets/images/online (2).jpg" alt="การสอนปัจจุบัน">
-                        <img src="assets/images/online (3).jpg" alt="การสอนปัจจุบัน">
+                    <div class="timeline-image">
+                        <div class="image-slideshow">
+                            <img src="assets/images/group.jpg" alt="โรงเรียนอนุบาลในกรุงเทพ" class="active" onerror="this.style.display='none'">
+                            <img src="assets/images/group (2).jpg" alt="โรงเรียนอนุบาลในกรุงเทพ" onerror="this.style.display='none'">
+                            <img src="assets/images/group (3).jpg" alt="โรงเรียนอนุบาลในกรุงเทพ" onerror="this.style.display='none'">
+                        </div>
                     </div>
-                   
                 </div>
 
+                <!-- COVID Pivot -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="era-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="timeline-year">2020</div>
+                        <h3>การปรับตัวสู่ดิจิทัล</h3>
+                        <p>พัฒนาระบบการสอนออนไลน์ในช่วงล็อกดาวน์ สร้างแบบฝึกหัดดิจิทัลและระบบฝึกสนทนาผ่าน Facebook และ Line Messenger รักษาอัตรานักเรียนไว้ได้ 100% ตลอดการเปลี่ยนแปลง</p>
+                    </div>
+                    <div class="timeline-image">
+                        <div class="image-slideshow">
+                            <img src="assets/images/online.jpg" alt="การสอนออนไลน์" class="active" onerror="this.style.display='none'">
+                            <img src="assets/images/online (2).jpg" alt="การสอนออนไลน์" onerror="this.style.display='none'">
+                            <img src="assets/images/online (3).jpg" alt="การสอนออนไลน์" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Present Day -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="era-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="timeline-year">2025</div>
+                        <h3>สานต่อความสำเร็จ</h3>
+                        <p>ปัจจุบันผสมผสานการสอนแบบดั้งเดิมกับเทคโนโลยีสมัยใหม่ มีทั้งคลาสเรียนแบบพบปะและออนไลน์ รักษาประวัติความสำเร็จทางวิชาการขณะปรับตัวรับความท้าทายใหม่ๆ</p>
+                    </div>
+                    <div class="timeline-image">
+                        <div class="image-slideshow">
+                            <img src="assets/images/online.jpg" alt="การสอนปัจจุบัน" class="active" onerror="this.style.display='none'">
+                            <img src="assets/images/online (2).jpg" alt="การสอนปัจจุบัน" onerror="this.style.display='none'">
+                            <img src="assets/images/online (3).jpg" alt="การสอนปัจจุบัน" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Teaching Areas -->
     <section class="teaching-areas">
         <div class="container">
@@ -244,15 +234,15 @@
             <h2>หลักฐานความสำเร็จ</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/images/group.jpg" alt="ค่ายฤดูร้อน">
+                    <img src="assets/images/group.jpg" alt="ค่ายฤดูร้อน" onerror="this.style.display='none'">
                     <p>ค่ายฤดูร้อน - เรียนรู้เกี่ยวกับการเงิน</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/group (2).jpg" alt="คลาสเรียนภาษาอังกฤษ">
+                    <img src="assets/images/group (2).jpg" alt="คลาสเรียนภาษาอังกฤษ" onerror="this.style.display='none'">
                     <p>คลาสเรียนภาษาอังกฤษระดับพื้นฐาน</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/group (3).jpg" alt="คลาสกลุ่มภาษาอังกฤษ">
+                    <img src="assets/images/group (3).jpg" alt="คลาสกลุ่มภาษาอังกฤษ" onerror="this.style.display='none'">
                     <p>คลาสเรียนภาษาอังกฤษแบบกลุ่ม</p>
                 </div>
             </div>
@@ -266,7 +256,7 @@
             <p>ร่วมเป็นส่วนหนึ่งของนักเรียนที่ประสบความสำเร็จมากมายที่พบเส้นทางกับเรา</p>
             <div class="social-link">
                 <a href="https://www.facebook.com/tutorchanny" target="_blank">
-                    <img src="assets/images/facebook-icon.png" alt="Facebook" width="40">
+                    <img src="assets/images/facebook-icon.png" alt="Facebook" width="40" onerror="this.style.display='none'">
                 </a>
             </div>
         </div>
